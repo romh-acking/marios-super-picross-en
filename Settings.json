@@ -1,0 +1,247 @@
+{
+  "spiroVersion": 3,
+  "files": {
+    "original": ".\\roms\\Mario no Super Picross (Japan).sfc",
+    "new": ".\\roms\\Mario no Super Picross (NEW).sfc"
+  },
+  "scripts": {
+    "scriptPath": ".\\script\\Script.json",
+    "original": true,
+    "comment": false,
+    "new": true,
+    "bytes": false,
+    "menu": true,
+    "proof": false
+  },
+  "misc": {
+    "blankOutTextDataAfterRead": false,
+    "blankOutByte": "0x62",
+    "multiplePointersReferencingAString": true,
+    "getFileToWritePointerFromPointersField": false
+  },
+  "scriptManager": {
+    "writeScript": "",
+    "displayReplace": [
+      {
+        "find": "\\[LINE\\]",
+        "replace": "\r\n"
+      },
+      {
+        "find": "\\[END\\]",
+        "replace": "\r\n"
+      },
+      {
+        "find": "\\[parenth left\\]",
+        "replace": "（"
+      },
+      {
+        "find": "\\[parenth right\\]",
+        "replace": "）"
+      }
+    ]
+  },
+  "pointers": {
+    "read&Write": {
+      "Text": {
+        "file": "original",
+        "pointerFormat": {
+          "addresses": [
+            "0xB7ED",
+            "0xB87D",
+            "0xB8AE",
+            "0xB8E1",
+            "0xB90F",
+            "0xB975",
+            "0xB9C2",
+            "0xB9EE",
+            "0xBA1F",
+            "0xBA4D",
+            "0xBA7E",
+            "0xBAF3",
+            "0xBB24",
+            "0xBB52",
+            "0xBB83",
+            "0xBBF0",
+            "0xBC33",
+            "0xBC74",
+            "0xBCDA",
+            "0xBD04",
+            "0xBD5B",
+            "0xBDAA",
+            "0xBDCD",
+            "0xBE21",
+            "0xBE8E",
+            "0xBEBA",
+            "0x91B4",
+            "0x91D1",
+            "0x9228",
+            "0x9249",
+            "0x931F",
+            "0x9338",
+            "0x935F",
+            "0x9382",
+            "0x93BA",
+            "0x945D",
+            "0x9476",
+            "0x94B2",
+            "0x9555",
+            "0x956E",
+            "0x95BF",
+            "0x96CB",
+            "0x965E",
+            "0x9908",
+            "0x9936",
+            "0x9A46",
+            "0x9A68",
+            "0x9A85",
+            "0x9ADB",
+            "0x9AFD",
+            "0x9B21",
+            "0x9B51",
+            "0x9BA7",
+            "0x9BD5",
+            "0x9C39",
+            "0x9C8F",
+            "0x999B",
+            "0x99C9",
+            "0x99ED"
+          ],
+          "pcDifference": "+0xC00000",
+          "addressConversion": "HiROM",
+          "entryNumber": "0x1",
+          "pointerType": "Custom",
+          "pointerLength": 6,
+          "customPointerFormat": [
+            "A9",
+            "(B0)",
+            "(B1)",
+            "8D",
+            "E0",
+            "1B"
+          ],
+		  "subentryKeyPrefix": "text"
+        },
+        "renderFormat": {
+          "dialogueReadType": "HasDelimiter",
+          "delimiters": [
+            "[END]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "tables": {
+            "main": {
+                "isMain": true,
+                "chrFile": ".\\tables\\CHR",
+                "dictionaryFile": "",
+                "mirrorBlankDictionaryEntries": false,
+            }
+          },
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      },
+      "Picross Data With Names": {
+        "file": "original",
+        "pointerFormat": {
+          "addresses": [
+            "0x0000C931"
+          ],
+          "pcDifference": "+0x0",
+          "addressConversion": "hiROM",
+          "entryNumber": "0301",
+          "pointerType": "LittleEndian",
+          "pointerLength": 3,
+          "bytesBetween": "1",
+		  "subentryKeyPrefix": "picross"
+        },
+        "renderFormat": {
+          "dialogueReadType": "MarioPicrossSNES",
+          "delimiters": [
+            "[Picross Data End]"
+          ],
+          "renderType": "Dictionary",
+          "dictionaryInteractions": [
+            "CHR"
+          ],
+          "isDictionary": false,
+          "tables": {
+            "main": {
+                "isMain": true,
+                "chrFile": ".\\tables\\CHR",
+                "dictionaryFile": "",
+                "mirrorBlankDictionaryEntries": false,
+            }
+          },
+          "pixelsPerLine": 176,
+          "autoLineBreak": "None",
+          "storeOutOfOrderToSaveSpace": false,
+          "reverseTableEndianness": true
+        }
+      }
+    }
+  },
+  "write": {
+    "writeableRange": {
+      "Mario & Wario Messages Range": {
+        "file": "new",
+        "startAddress": "0xE1C8",
+        "size": "0x672"
+      },
+      "Tutorial Range": {
+        "file": "new",
+        "startAddress": "0xECB0",
+        "size": "0x4A8"
+      },
+      "Free Space Range #1": {
+        "file": "new",
+        "startAddress": "0xF230",
+        "size": "0xD36"
+      },
+      "Free Space Range #2": {
+        "file": "new",
+        "startAddress": "0x9F030",
+        "size": "0xFD0"
+      },
+      "Free Space Range #3": {
+        "file": "new",
+        "startAddress": "0xCC2C0",
+        "size": "0x3D40"
+      },
+      "Picross Data Range": {
+        "file": "new",
+        "startAddress": "0xA0000",
+        "size": "0x2C237"
+      }
+    },
+    "writeRegion": [
+      {
+        "entryOwners": [
+          "Text"
+        ],
+        "writeableAddressRanges": [
+          "Mario & Wario Messages Range",
+          "Tutorial Range",
+          "Free Space Range #1",
+          "Free Space Range #2",
+          "Free Space Range #3"
+        ]
+      },
+      {
+        "entryOwners": [
+          "Picross Data With Names"
+        ],
+        "writeableAddressRanges": [
+          "Picross Data Range",
+          "Free Space Range #1",
+          "Free Space Range #2",
+          "Free Space Range #3"
+        ]
+      }
+    ]
+  }
+}

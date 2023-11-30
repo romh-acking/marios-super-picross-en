@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Mario Picross GFX/1.0.0": {
+        "dependencies": {
+          "Libraries": "1.0.0"
+        },
+        "runtime": {
+          "Mario Picross GFX.dll": {}
+        }
+      },
+      "Libraries/1.0.0": {
+        "runtime": {
+          "Libraries.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mario Picross GFX/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Libraries/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
